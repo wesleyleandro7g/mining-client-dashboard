@@ -6,6 +6,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   margin-top: 5%;
@@ -14,6 +15,8 @@ export const Content = styled.div`
 `;
 
 export const ContainCards = styled(Content)`
+  flex-direction: row;
   justify-content: space-around;
+  margin-top: 1%;
   height: 85%;
 `;

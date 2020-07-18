@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ export const ContainTitle = styled.div`
 `;
 export const Title = styled.h2``;
 
-export const ContainProduct = styled.button`
+export const ContainProduct = styled(Link)`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +32,8 @@ export const ContainProduct = styled.button`
   border: 1px solid #d9d9d9;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  color: #000;
 
   :hover {
     -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
@@ -43,6 +46,6 @@ export const ContainProduct = styled.button`
   }
 `;
 
-export const SectionName = styled.h4`
+export const SectionName = styled.h3`
   color: #737373;
 `;

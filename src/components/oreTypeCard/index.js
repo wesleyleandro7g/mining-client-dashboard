@@ -10,20 +10,13 @@ import {
 } from "./styles";
 
 const oreTypeCard = ({ title, products }) => {
-  function alertProduct(name) {
-    alert(name);
-  }
-
   return (
     <Container>
       <ContainTitle>
         <Title>{title}</Title>
       </ContainTitle>
       {products.map((product) => (
-        <ContainProduct
-          key={product.id}
-          onClick={() => alertProduct(product.name)}
-        >
+        <ContainProduct key={product.id} to="/compras/produtos">
           <SectionName>{product.name}</SectionName>
           <KeyboardArrowRightIcon />
         </ContainProduct>

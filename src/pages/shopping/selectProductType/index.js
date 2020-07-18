@@ -1,9 +1,9 @@
 import React from "react";
 
-import PersistentDrawerLeft from "../../components/drawer";
-import OreTypeCard from "../../components/oreTypeCard";
+import PersistentDrawerLeft from "../../../components/drawer";
+import OreTypeCard from "../../../components/oreTypeCard";
 
-import { products1, products2, products3 } from "../../Temp/TypeProduct";
+import { products1, products2, products3 } from "../../../Temp/TypeProduct";
 
 import { Container, Content, ContainCards } from "./styles";
 
@@ -12,6 +12,7 @@ function shopping() {
     <Container>
       <PersistentDrawerLeft select={2} title="Comprar" />
       <Content>
+        <h1>Selecione o tipo de produto</h1>
         <ContainCards>
           <OreTypeCard title="Minerais metálicos" products={products1} />
           <OreTypeCard title="Minerais não metálicos" products={products2} />
