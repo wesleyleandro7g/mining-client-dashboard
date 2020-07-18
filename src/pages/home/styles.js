@@ -16,11 +16,12 @@ export const Content = styled.div`
 
 export const ContainCards = styled.div`
   display: flex;
-  width: 99%;
+  width: 98%;
   justify-content: space-between;
+  margin-top: 7%;
+  margin-bottom: 3%;
 `;
 
 export const Scroll = styled(Scrolle)`
-  margin-top: 5vh;
   height: 100vh;
 `;

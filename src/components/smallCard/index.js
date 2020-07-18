@@ -2,19 +2,19 @@ import React from "react";
 
 import { Container, Content, CardHeader, CardFooter } from "./styles";
 
-function mediumCard() {
+function smallCard() {
   return (
     <Container>
       <Content>
         <CardHeader>
-          <h3>MEDIUM CARD</h3>
+          <h4>SMALL CARD</h4>
         </CardHeader>
         <CardFooter>
-          <h4>MEDIUM CARD</h4>
+          <h6>SMALL CARD</h6>
         </CardFooter>
       </Content>
     </Container>
   );
 }
 
-export default mediumCard;
+export default smallCard;
