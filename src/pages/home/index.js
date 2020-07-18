@@ -29,6 +29,17 @@ function home() {
             <MediumCard />
             <MediumCard />
           </ContainCards>
+          <ContainCards
+            style={{
+              marginTop: 0,
+              marginBottom: 2,
+              justifyContent: "flex-end",
+            }}
+          >
+            <h5 style={{ fontSize: 14, fontWeight: 400, color: "#696969" }}>
+              Todos os direitos reservados | MINING 2020
+            </h5>
+          </ContainCards>
         </Scroll>
       </Content>
     </Container>
