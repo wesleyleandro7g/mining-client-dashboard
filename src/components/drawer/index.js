@@ -16,38 +16,44 @@ import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import ForumIcon from "@material-ui/icons/Forum";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import HomeIcon from "@material-ui/icons/Home";
 
 import { Link } from "react-router-dom";
 
 const menu = [
   {
     id: 1,
-    name: "Comprar",
-    icon: InboxIcon,
-    nav: "/pedidos",
+    name: "Home",
+    icon: HomeIcon,
+    nav: "/home",
   },
   {
     id: 2,
-    name: "Negociações",
+    name: "Comprar",
     icon: ShoppingCartIcon,
-    nav: "/produtos",
+    nav: "/compras",
   },
   {
     id: 3,
+    name: "Negociações",
+    icon: ForumIcon,
+    nav: "/negociacoes",
+  },
+  {
+    id: 4,
     name: "Pedidos",
     icon: ShoppingBasketIcon,
-    nav: "/usuarios",
+    nav: "/pedidos",
   },
 ];
 
 const drawerWidth = 280;
 
-export default function MiniDrawer() {
+export default function MiniDrawer({ select, title }) {
   const classes = useStyles();
-  // const theme = useTheme();
   const [open, setOpen] = useState(true);
   const [expandMoreInfoUser, setExpandMoreInfoUser] = useState(false);
 
@@ -83,7 +89,7 @@ export default function MiniDrawer() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Bem vindo, Leandro
+              {title}
             </Typography>
           </Toolbar>
           <Typography variant="h6" noWrap>
@@ -148,22 +154,28 @@ export default function MiniDrawer() {
                   marginRight: open ? "15px" : "0",
                 }}
               >
-                <div
-                  style={{
-                    width: "30px",
-                    height: "30px",
-                    borderRadius: "15px",
-                    marginRight: "5px",
-                    backgroundColor: "#bababa",
-                  }}
-                />
+                {!open && (
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "15px",
+                      backgroundColor: "#d9d9d9",
+                    }}
+                  >
+                    WL
+                  </div>
+                )}
                 {open && <Typography variant="h6">Wesley Leandro</Typography>}
               </div>
               {open ? (
                 expandMoreInfoUser ? (
-                  <ExpandMoreIcon />
-                ) : (
                   <ExpandLessIcon />
+                ) : (
+                  <ExpandMoreIcon />
                 )
               ) : null}
             </div>
@@ -199,7 +211,11 @@ export default function MiniDrawer() {
         <List>
           {menu.map((item) => (
             <Link to={item.nav} className={classes.nav}>
-              <ListItem button key={item.id}>
+              <ListItem
+                button
+                key={item.id}
+                style={{ backgroundColor: item.id === select && "#d9d9d9" }}
+              >
                 <ListItemIcon>
                   <item.icon size="20" color="black" />
                 </ListItemIcon>
@@ -290,6 +306,9 @@ const useStyles = makeStyles((theme) => ({
   nav: {
     color: "inherit",
     textDecoration: "inherit",
+  },
+  navSelected: {
+    backgroundColor: "red",
   },
   userConected: {
     display: "flex",

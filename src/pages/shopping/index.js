@@ -4,15 +4,15 @@ import PersistentDrawerLeft from "../../components/drawer";
 
 import { Container, Content } from "./styles";
 
-function home() {
+function shopping() {
   return (
     <Container>
-      <PersistentDrawerLeft select={1} title="Bem vindo, Leandro" />
+      <PersistentDrawerLeft select={2} title="Comprar" />
       <Content>
-        <h1>HOME</h1>
+        <h1>COMPRAR</h1>
       </Content>
     </Container>
   );
 }
 
-export default home;
+export default shopping;
