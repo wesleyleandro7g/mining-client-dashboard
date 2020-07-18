@@ -1,12 +1,20 @@
 import React from "react";
 
-import { Container } from "./styles";
+import PersistentDrawerLeft from "../../components/drawer";
+
+import { Container, Content } from "./styles";
 
 function home() {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Container>
+      <PersistentDrawerLeft />
+      <Content>
+        <h1>Teste</h1>
+        <h1>Teste</h1>
+        <h1>Teste</h1>
+        <h1>Teste</h1>
+      </Content>
+    </Container>
   );
 }
 
