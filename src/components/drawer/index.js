@@ -130,7 +130,10 @@ export default function MiniDrawer({ select, title }) {
         <Typography
           component="div"
           className={classes.userConected}
-          style={{ height: expandMoreInfoUser ? "20%" : "10%" }}
+          style={{
+            height: expandMoreInfoUser ? "20%" : "10%",
+            transition: "200ms",
+          }}
         >
           <div
             style={{
@@ -166,10 +169,14 @@ export default function MiniDrawer({ select, title }) {
                       backgroundColor: "#d9d9d9",
                     }}
                   >
-                    WL
+                    {localStorage.getItem("initials")}
                   </div>
                 )}
-                {open && <Typography variant="h6">Wesley Leandro</Typography>}
+                {open && (
+                  <Typography variant="h6">
+                    {localStorage.getItem("userName")}
+                  </Typography>
+                )}
               </div>
               {open ? (
                 expandMoreInfoUser ? (
@@ -188,7 +195,6 @@ export default function MiniDrawer({ select, title }) {
                   marginTop: "10%",
                   padding: "10%",
                   borderRadius: "5px",
-                  backgroundColor: "rgba(211, 211, 211, .2)",
                 }}
               >
                 <Typography

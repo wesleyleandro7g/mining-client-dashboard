@@ -49,6 +49,8 @@ export const TextInput = styled.input`
   border-radius: 8px;
   padding: 0 0 0 20px;
 
+  -webkit-text-security: ${(props) => props.secure};
+
   :focus {
     outline: 0;
   }

@@ -10,7 +10,10 @@ import { Container, Content, ContainCards, Scroll } from "./styles";
 function home() {
   return (
     <Container>
-      <PersistentDrawerLeft select={1} title="Bem vindo, Leandro" />
+      <PersistentDrawerLeft
+        select={1}
+        title={`Bem vindo(a), ${localStorage.getItem("firstName")}!`}
+      />
       <Content>
         <Scroll speed={0.8} contentClassName="content">
           <ContainCards>
