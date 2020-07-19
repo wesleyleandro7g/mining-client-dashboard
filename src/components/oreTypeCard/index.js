@@ -10,13 +10,22 @@ import {
 } from "./styles";
 
 const oreTypeCard = ({ title, products }) => {
+  function handleNavigation(name, title) {
+    localStorage.setItem("section", title);
+    localStorage.setItem("product", name);
+  }
+
   return (
     <Container>
       <ContainTitle>
         <Title>{title}</Title>
       </ContainTitle>
       {products.map((product) => (
-        <ContainProduct key={product.id} to="/compras/produtos">
+        <ContainProduct
+          key={product.id}
+          to="/compras/produtos"
+          onClick={() => handleNavigation(product.name, title)}
+        >
           <SectionName>{product.name}</SectionName>
           <KeyboardArrowRightIcon />
         </ContainProduct>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Scrolle from "react-scrollbar";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +15,9 @@ export const Content = styled.div`
   margin-right: 1%;
 `;
 
-export const ContaintSubHeader = styled.div``;
+export const ContaintSubHeader = styled.div`
+  display: flex;
+`;
 
 export const ContainProductsList = styled.div`
   display: grid;
@@ -35,7 +38,18 @@ export const ContainProductsList = styled.div`
   }
 `;
 
-export const Title = styled.h2``;
+export const Title = styled(Link)`
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 500;
+
+  :focus {
+    outline: none;
+  }
+`;
 
 export const Scroll = styled(Scrolle)`
   height: 80vh;
