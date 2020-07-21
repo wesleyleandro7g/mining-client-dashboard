@@ -17,6 +17,7 @@ export const Content = styled.div`
 export const ContainCards = styled(Content)`
   flex-direction: row;
   justify-content: space-around;
+  align-self: center;
   margin-top: 1%;
   height: 85%;
 `;

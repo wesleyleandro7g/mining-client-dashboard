@@ -17,6 +17,7 @@ export const Content = styled.div`
 
 export const ContaintSubHeader = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 export const ContainProductsList = styled.div`

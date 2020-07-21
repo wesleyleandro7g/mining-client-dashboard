@@ -9,9 +9,9 @@ export const Container = styled.div`
   border-radius: 5px;
   background-color: #fff;
 
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(166, 166, 166, 1);
-  -moz-box-shadow: 0px 0px 12px 0px rgba(166, 166, 166, 1);
-  box-shadow: 0px 0px 12px 0px rgba(166, 166, 166, 1);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
+  box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
 `;
 
 export const ContainTitle = styled.div`
@@ -39,6 +39,8 @@ export const ContainProduct = styled(Link)`
     -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
     -moz-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
     box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
+
+    background-color: #eee;
   }
 
   :focus {

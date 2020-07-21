@@ -1,18 +1,28 @@
 import React from "react";
+import Lottie from "react-lottie";
 
-import Drawer from "../../components/drawer";
+import PersistentDrawerLeft from "../../components/drawer";
 
-import { Container, Content } from "./styles";
+import { Container, Content, Title } from "./styles";
 
-function requests() {
+import pageContruction from "../../assets/animations/development.json";
+
+function Requests() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: pageContruction,
+  };
+
   return (
     <Container>
-      <Drawer select={4} title="Meus pedidos" />
+      <PersistentDrawerLeft select={4} title="Negociações" />
       <Content>
-        <h1>PEDIDOS</h1>
+        <Lottie options={defaultOptions} width="100%" height="100%" />
+        <Title>Em construção!!!</Title>
       </Content>
     </Container>
   );
 }
 
-export default requests;
+export default Requests;

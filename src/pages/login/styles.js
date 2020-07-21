@@ -25,12 +25,12 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   font-size: 50px;
-  color: #e02041;
+  color: #34558b;
 `;
 
 export const SubTitle = styled.h2`
   font-size: 30px;
-  color: #313131;
+  color: #333;
 `;
 
 export const Form = styled.form`
@@ -44,6 +44,7 @@ export const TextInput = styled.input`
   margin-bottom: 10px;
   border-radius: 5px;
   border: 0;
+  font-size: 18px;
   color: #333;
   border: 1px solid #dcdec6;
   border-radius: 8px;
@@ -63,7 +64,7 @@ export const Button = styled.button`
 
   border-radius: 5px;
   border: 0;
-  background-color: #e02041;
+  background-color: #34558b;
   color: #fafafa;
   font-size: 20px;
   font-weight: 700;
@@ -77,17 +78,4 @@ export const Button = styled.button`
     filter: brightness(90%);
     cursor: pointer;
   }
-`;
-
-export const Image = styled.img`
-  width: 90%;
-  height: 90%;
-  align-self: center;
-`;
-
-export const Cover = styled.div`
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
 `;

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link, useHistory } from "react-router-dom";
+import Lottie from "react-lottie";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {
   Container,
@@ -10,39 +12,53 @@ import {
   Form,
   TextInput,
   Button,
-  Image,
 } from "./styles";
 
-import img from "../../assets/images/heroes.png";
+import animation from "../../assets/animations/lets-chat.json";
 
 export default function Login() {
   const history = useHistory();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [spiner, setSpiner] = useState(false);
 
-  function handleLogin() {
-    if (!userName) {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animation,
+  };
+
+  function handleLogin(e) {
+    e.preventDefault();
+
+    if (!userName || !password) {
       alert("Preencha todos os campos");
       return;
     }
 
-    if (password == "123") {
-      const parts = userName.split(" ");
-      if (parts.length == 1) {
-        const initials = parts[0].substring(0, 1);
-        localStorage.setItem("initials", initials.toUpperCase());
+    setSpiner(!spiner);
+
+    setTimeout(() => {
+      if (password == "123") {
+        const parts = userName.split(" ");
+        if (parts.length == 1) {
+          const initials = parts[0].substring(0, 1);
+          localStorage.setItem("initials", initials.toUpperCase());
+        } else {
+          const initials = parts[0].substring(0, 1) + parts[1].substring(0, 1);
+          localStorage.setItem("initials", initials.toUpperCase());
+        }
+
+        localStorage.setItem("firstName", parts[0]);
+        localStorage.setItem("userName", userName);
+
+        history.push("/home");
+        setSpiner(false);
       } else {
-        const initials = parts[0].substring(0, 1) + parts[1].substring(0, 1);
-        localStorage.setItem("initials", initials.toUpperCase());
+        setSpiner(false);
+        alert("Senha Incorreta!");
       }
-
-      localStorage.setItem("firstName", parts[0]);
-      localStorage.setItem("userName", userName);
-
-      history.push("/home");
-    } else {
-      alert("Senha Incorreta!");
-    }
+    }, 1000);
   }
 
   return (
@@ -61,15 +77,21 @@ export default function Login() {
             secure="disc"
           />
 
-          <Button onClick={handleLogin}>Entar</Button>
+          <Button onClick={handleLogin}>
+            {spiner ? (
+              <CircularProgress size={22} style={{ color: "#fff" }} />
+            ) : (
+              "Entrar"
+            )}
+          </Button>
         </Form>
         <Link className="back-link">
-          <FiLogIn size={16} color="#E02041" />
+          <FiLogIn size={16} color="#34558b" />
           Não tenho cadastro
         </Link>
       </Content>
-      <Content>
-        <Image src={img} />
+      <Content style={{ maxWidth: "100%" }}>
+        <Lottie options={defaultOptions} width="100%" height="100%" />
       </Content>
     </Container>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 import Drawer from "../../../components/drawer";
 import ProductCard from "../../../components/productCard";
@@ -20,6 +21,9 @@ function handleProducts() {
       <Drawer select={2} title="Comprar" />
       <Content>
         <ContaintSubHeader>
+          <ArrowBackIcon
+            style={{ color: "#000", fontSize: 22, marginRight: 5 }}
+          />
           <Title to="/compras">{localStorage.getItem("section")}</Title>
           <Title>|</Title>
           <Title style={{ cursor: "auto" }}>
