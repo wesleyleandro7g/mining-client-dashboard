@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/CommonStyles";
 
 export const Container = styled.button`
   display: flex;
@@ -13,7 +14,7 @@ export const Container = styled.button`
   border-radius: 5px;
   border: 0;
   cursor: pointer;
-  background-color: #f2f2f2;
+  background-color: ${(props) => Colors.tertiary};
   transition: 200ms all;
 
   -webkit-box-shadow: 0px 0px 2px 0px rgba(105, 105, 105, 1);

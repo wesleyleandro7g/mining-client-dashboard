@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 import Drawer from "../../../components/drawer";
@@ -15,7 +16,13 @@ import {
 
 import { products } from "../../../Temp/Products";
 
-function handleProducts() {
+function HandleProducts() {
+  const history = useHistory();
+
+  const handleProductDatails = () => {
+    history.push("/compras/produtos/datalhes");
+  };
+
   return (
     <Container>
       <Drawer select={2} title="Comprar" />
@@ -25,7 +32,7 @@ function handleProducts() {
             style={{ color: "#000", fontSize: 22, marginRight: 5 }}
           />
           <Title to="/compras">{localStorage.getItem("section")}</Title>
-          <Title>|</Title>
+          <Title>-</Title>
           <Title style={{ cursor: "auto" }}>
             {localStorage.getItem("product")}
           </Title>
@@ -33,7 +40,10 @@ function handleProducts() {
         <Scroll speed={2} contentClassName="content">
           <ContainProductsList>
             {products.map((product) => (
-              <ProductCard product={product} />
+              <ProductCard
+                product={product}
+                onClick={() => handleProductDatails(product)}
+              />
             ))}
           </ContainProductsList>
         </Scroll>
@@ -42,4 +52,4 @@ function handleProducts() {
   );
 }
 
-export default handleProducts;
+export default HandleProducts;

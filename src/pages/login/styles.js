@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/CommonStyles";
 
 export const Container = styled.div`
   width: 100%;
@@ -25,12 +26,12 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   font-size: 50px;
-  color: #34558b;
+  color: ${Colors.primary};
 `;
 
 export const SubTitle = styled.h2`
   font-size: 30px;
-  color: #333;
+  color: ${Colors.title};
 `;
 
 export const Form = styled.form`
@@ -45,7 +46,7 @@ export const TextInput = styled.input`
   border-radius: 5px;
   border: 0;
   font-size: 18px;
-  color: #333;
+  color: ${Colors.title};
   border: 1px solid #dcdec6;
   border-radius: 8px;
   padding: 0 0 0 20px;
@@ -65,7 +66,7 @@ export const Button = styled.button`
   border-radius: 5px;
   border: 0;
   background-color: #34558b;
-  color: #fafafa;
+  color: ${Colors.buttonText};
   font-size: 20px;
   font-weight: 700;
 

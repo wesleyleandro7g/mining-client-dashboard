@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { Colors } from "../../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
+  background-color: ${(props) => Colors.background};
 `;
 
 export const Content = styled.div`
@@ -12,6 +14,7 @@ export const Content = styled.div`
   margin-top: 5%;
   margin-left: 1%;
   margin-right: 1%;
+  background-color: ${(props) => Colors.background};
 `;
 
 export const ContainCards = styled(Content)`

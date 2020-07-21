@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Colors } from "../../styles/CommonStyles";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -220,7 +221,9 @@ export default function MiniDrawer({ select, title }) {
               <ListItem
                 button
                 key={item.id}
-                style={{ backgroundColor: item.id === select && "#d9d9d9" }}
+                style={{
+                  backgroundColor: item.id === select && Colors.background,
+                }}
               >
                 <ListItemIcon>
                   <item.icon size="20" color="black" />
@@ -245,7 +248,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor: "#1e1e24",
+    backgroundColor: Colors.secondary,
   },
   appBarShift: {
     marginLeft: drawerWidth,

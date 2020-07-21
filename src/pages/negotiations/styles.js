@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
+  background-color: ${(props) => Colors.background};
 `;
 
 export const Content = styled.div`
@@ -13,6 +15,7 @@ export const Content = styled.div`
   height: 90vh;
   margin-top: 5%;
   margin-left: 1%;
+  background-color: ${(props) => Colors.background};
 `;
 
 export const Title = styled.h1`

@@ -13,9 +13,9 @@ import {
   TextInfo,
 } from "./styles";
 
-function productCard({ product }) {
+function productCard({ product, onClick }) {
   return (
-    <Container onClick={() => alert(product.name)}>
+    <Container onClick={onClick}>
       <ContainImage>
         {product.image ? (
           <Image src={product.image} />

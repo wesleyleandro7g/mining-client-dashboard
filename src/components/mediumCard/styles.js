@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const Container = styled.div`
   width: 30%;
   height: 220px;
   border-radius: 5px;
-  background-color: #eee;
+  background-color: ${(props) => Colors.tertiary};
 
   -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
   -moz-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
