@@ -51,7 +51,7 @@ const menu = [
   },
 ];
 
-const drawerWidth = 280;
+const drawerWidth = 240;
 
 export default function MiniDrawer({ select, title }) {
   const classes = useStyles();
@@ -121,10 +121,15 @@ export default function MiniDrawer({ select, title }) {
         <Typography
           component="div"
           className={classes.toolbar}
-          style={{ height: open ? "100px" : "50px" }}
+          style={{ height: open ? "100px" : "50px", transition: "200ms" }}
         >
           <Typography component="div" className={classes.company}>
-            <Typography variant="h4">MINING</Typography>
+            <Typography
+              variant="h4"
+              style={{ fontWeight: "bold", letterSpacing: 2 }}
+            >
+              MINING
+            </Typography>
           </Typography>
         </Typography>
         <Divider />

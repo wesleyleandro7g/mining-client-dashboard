@@ -1,4 +1,5 @@
 import React from "react";
+import { MdReportProblem, MdAttachMoney, MdTrendingUp } from "react-icons/md";
 
 import PersistentDrawerLeft from "../../components/drawer";
 import SmallCard from "../../components/smallCard";
@@ -17,10 +18,34 @@ function home() {
       <Content>
         <Scroll speed={0.8} contentClassName="content">
           <ContainCards>
-            <SmallCard />
-            <SmallCard />
-            <SmallCard />
-            <SmallCard />
+            <SmallCard
+              colorCardIcon="#40bf40"
+              icon={MdAttachMoney}
+              titleCard="Saldo disponível"
+              textCard="R$ 54000,00"
+              textFooter="SMALL CARD"
+            />
+            <SmallCard
+              colorCardIcon="#ffad33"
+              icon={MdReportProblem}
+              titleCard="Small card"
+              textCard="Small Card"
+              textFooter="SMALL CARD"
+            />
+            <SmallCard
+              colorCardIcon="#ff4d4d"
+              icon={MdReportProblem}
+              titleCard="Small Card"
+              textCard="Small Card"
+              textFooter="SMALL CARD"
+            />
+            <SmallCard
+              colorCardIcon="#1ab2ff"
+              icon={MdTrendingUp}
+              titleCard="Ultima compra"
+              textCard="Nenhuma compra"
+              textFooter="SMALL CARD"
+            />
           </ContainCards>
           <ContainCards>
             <LargeCard>

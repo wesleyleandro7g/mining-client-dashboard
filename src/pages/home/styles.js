@@ -23,6 +23,19 @@ export const ContainCards = styled.div`
   justify-content: space-between;
   margin-top: 7%;
   margin-bottom: 3%;
+
+  @media (max-width: 1250px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    width: 98%;
+    margin-top: 10%;
+  }
+
+  @media (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Scroll = styled(Scrolle)`

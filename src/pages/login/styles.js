@@ -26,6 +26,7 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   font-size: 50px;
+  letter-spacing: 3px;
   color: ${Colors.primary};
 `;
 
