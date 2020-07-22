@@ -38,6 +38,12 @@ export const ContainCards = styled.div`
   }
 `;
 
+export const ContainMediumCards = styled(ContainCards)`
+  @media (max-width: 1250px) {
+    display: flex;
+  }
+`;
+
 export const Scroll = styled(Scrolle)`
   height: 100vh;
 `;

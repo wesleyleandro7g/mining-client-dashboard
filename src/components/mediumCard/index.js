@@ -1,20 +1,29 @@
 import React from "react";
 
-import { Container, Content, CardHeader, CardFooter } from "./styles";
+import {
+  Container,
+  CardHeader,
+  CardFooter,
+  SuspenseCard,
+  ContainSuspenseInfo,
+} from "./styles";
 
-function mediumCard() {
+function MediumCard({ color }) {
   return (
     <Container>
-      <Content>
-        <CardHeader>
-          <h3>MEDIUM CARD</h3>
-        </CardHeader>
-        <CardFooter>
-          <h4>MEDIUM CARD</h4>
-        </CardFooter>
-      </Content>
+      <CardHeader>
+        <SuspenseCard color={color}>
+          <h2>MEDIUM CARD</h2>
+        </SuspenseCard>
+        <ContainSuspenseInfo>
+          <h5>MEDIUM CARD</h5>
+        </ContainSuspenseInfo>
+      </CardHeader>
+      <CardFooter>
+        <h4>MEDIUM CARD</h4>
+      </CardFooter>
     </Container>
   );
 }
 
-export default mediumCard;
+export default MediumCard;

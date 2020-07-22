@@ -6,25 +6,50 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 30%;
-  height: 220px;
+  height: 230px;
   border-radius: 5px;
   background-color: ${(props) => Colors.tertiary};
+  border: 0.5px solid rgba(153, 153, 153, 0.2);
 
-  -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-  -moz-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-  box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-
-  transition: all 300ms;
-
-  :hover {
-    -webkit-box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
-    -moz-box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
-    box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
+  @media (max-width: 1080px) {
+    width: 80%;
+    margin-top: 7%;
   }
 `;
 
-export const Content = styled(Container)`
+export const SuspenseCard = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  height: 200px;
+  border-radius: 5px;
+  background-color: ${(props) => props.color};
+  margin-top: -70px;
+
+  position: absolute;
+
+  :hover {
+    margin-top: -120px;
+    margin-bottom: 20px;
+    transition: 200ms;
+  }
+
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+  box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+
+  @media (max-width: 1080px) {
+    width: 70%;
+  }
+`;
+
+export const ContainSuspenseInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
 `;
