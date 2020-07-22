@@ -5,21 +5,42 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 550px;
+  border-radius: 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: ${(props) => Colors.tertiary};
+  border: 0.5px solid rgba(153, 153, 153, 0.2);
+`;
+
+export const ContainIconCard = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 90px;
+  margin-top: -30px;
+  background-color: ${(props) => props.colorCardIcon};
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+  box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+`;
+
+export const ContainItemsCard = styled.div`
+  display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 450px;
-  border-radius: 5px;
-  background-color: ${(props) => Colors.tertiary};
+  height: 100%;
+`;
 
-  -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-  -moz-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-  box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-
-  transition: all 300ms;
-
-  :hover {
-    -webkit-box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
-    -moz-box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
-    box-shadow: 0px 14px 33px -11px rgba(153, 153, 153, 1);
-  }
+export const Text = styled.h4`
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #595959;
 `;

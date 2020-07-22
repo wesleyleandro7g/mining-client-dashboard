@@ -1,13 +1,22 @@
 import React from "react";
+import MaterialTable from "../table";
 
-import { Container } from "./styles";
+import { Container, ContainIconCard, ContainItemsCard, Text } from "./styles";
 
-function largeCard() {
+const largeCard = ({
+  colorCardIcon,
+  icon,
+  titleCard,
+  textCard,
+  textFooter,
+}) => {
+  const IconName = icon;
+
   return (
     <Container>
-      <h2>LARGE CARD</h2>
+      <MaterialTable></MaterialTable>
     </Container>
   );
-}
+};
 
 export default largeCard;

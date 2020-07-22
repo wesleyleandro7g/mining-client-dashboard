@@ -2,7 +2,6 @@ import React from "react";
 
 import {
   Container,
-  Content,
   CardHeader,
   CardFooter,
   ContainIconCard,
@@ -21,20 +20,18 @@ const SmallCard = ({
 
   return (
     <Container>
-      <Content>
-        <CardHeader>
-          <ContainIconCard colorCardIcon={colorCardIcon}>
-            <IconName size="32" color="white" />
-          </ContainIconCard>
-          <ContainItemsCard>
-            <Text> {titleCard} </Text>
-            <Text style={{ fontSize: 22, color: "#333" }}> {textCard} </Text>
-          </ContainItemsCard>
-        </CardHeader>
-        <CardFooter>
-          <Text> {textFooter} </Text>
-        </CardFooter>
-      </Content>
+      <CardHeader>
+        <ContainIconCard colorCardIcon={colorCardIcon}>
+          <IconName size="32" color="white" />
+        </ContainIconCard>
+        <ContainItemsCard>
+          <Text> {titleCard} </Text>
+          <Text style={{ fontSize: 22, color: "#333" }}> {textCard} </Text>
+        </ContainItemsCard>
+      </CardHeader>
+      <CardFooter>
+        <Text> {textFooter} </Text>
+      </CardFooter>
     </Container>
   );
 };

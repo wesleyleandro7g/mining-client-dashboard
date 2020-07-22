@@ -21,11 +21,6 @@ export const Container = styled.div`
   }
 `;
 
-export const Content = styled(Container)`
-  width: 100%;
-  height: 100%;
-`;
-
 export const FloatCard = styled.div`
   position: absolute;
   width: 60px;

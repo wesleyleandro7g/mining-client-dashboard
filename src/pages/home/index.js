@@ -1,5 +1,6 @@
 import React from "react";
 import { MdReportProblem, MdAttachMoney, MdTrendingUp } from "react-icons/md";
+import Table from "../../components/table";
 
 import PersistentDrawerLeft from "../../components/drawer";
 import SmallCard from "../../components/smallCard";
@@ -47,10 +48,8 @@ function home() {
               textFooter="SMALL CARD"
             />
           </ContainCards>
-          <ContainCards>
-            <LargeCard>
-              <h1>Teste</h1>
-            </LargeCard>
+          <ContainCards style={{ display: "flex" }}>
+            <Table />
           </ContainCards>
           <ContainCards>
             <MediumCard />
