@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Colors } from "../../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +15,10 @@ export const Container = styled.div`
 export const ContainTitle = styled.div`
   margin-left: 5%;
 `;
-export const Title = styled.h2``;
+
+export const Title = styled.h2`
+  color: ${Colors.title};
+`;
 
 export const ContainProduct = styled(Link)`
   display: flex;
@@ -29,15 +33,16 @@ export const ContainProduct = styled(Link)`
   border-bottom: 1px solid #d9d9d9;
   cursor: pointer;
   text-decoration: none;
-  color: #4d4d4d;
+  color: #737373;
 
   :focus {
     outline: none;
   }
 
   :hover {
-    color: #1a1a1a;
-    border-bottom: 1px solid #404040;
+    color: #262626;
+    border-bottom: 1px solid #737373;
+    width: 92%;
     transition: 300ms;
   }
 `;

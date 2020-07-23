@@ -6,7 +6,13 @@ import Filter from "../../../components/filter";
 
 import { products1, products2, products3 } from "../../../Temp/TypeProduct";
 
-import { Container, Content, ContainCards, ContainHeader } from "./styles";
+import {
+  Container,
+  Content,
+  ContainCards,
+  ContainHeader,
+  Title,
+} from "./styles";
 
 function shopping() {
   return (
@@ -14,7 +20,7 @@ function shopping() {
       <PersistentDrawerLeft select={2} title="Comprar" />
       <Content>
         <ContainHeader>
-          <h1>Selecione o tipo de minério</h1>
+          <Title>Selecione o tipo de minério</Title>
           <Filter placeholder="Pesquisar minério" />
         </ContainHeader>
         <ContainCards>

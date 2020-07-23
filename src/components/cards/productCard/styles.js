@@ -6,29 +6,27 @@ export const Container = styled.button`
   flex-direction: column;
   align-items: center;
   width: 270px;
-  height: 340px;
+  height: 400px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 2px;
   border: 0;
   cursor: pointer;
   background-color: ${(props) => Colors.tertiary};
-  transition: 200ms all;
+  border: 0.5px solid rgba(153, 153, 153, 0.3);
 
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(105, 105, 105, 1);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(105, 105, 105, 1);
-  box-shadow: 0px 0px 2px 0px rgba(105, 105, 105, 1);
+  transition: 200ms all;
 
   :focus {
     outline: none;
   }
 
   :hover {
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(105, 105, 105, 1);
-    -moz-box-shadow: 0px 0px 15px 0px rgba(105, 105, 105, 1);
-    box-shadow: 0px 0px 15px 0px rgba(105, 105, 105, 1);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
+    box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
   }
 `;
 
@@ -38,7 +36,7 @@ export const ContainImage = styled.div`
   align-items: center;
   width: 98%;
   height: 40%;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: #e6e6e6;
   margin: 1%;
 `;
@@ -46,7 +44,7 @@ export const ContainImage = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 2px;
 `;
 
 export const ContainDatails = styled.div`

@@ -3,7 +3,7 @@ import { Colors } from "../../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
-  background-color: ${(props) => Colors.background};
+  background-color: ${Colors.background};
 `;
 
 export const Content = styled.div`
@@ -11,10 +11,9 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-
   margin-left: 1%;
   margin-right: 1%;
-  background-color: ${(props) => Colors.background};
+  background-color: ${Colors.background};
 `;
 
 export const ContainHeader = styled.header`
@@ -30,4 +29,8 @@ export const ContainCards = styled(Content)`
   align-self: center;
   margin-top: 1%;
   height: 85%;
+`;
+
+export const Title = styled.h1`
+  color: ${Colors.title};
 `;
