@@ -8,10 +8,7 @@ export const Container = styled.div`
   height: 80%;
   border-radius: 5px;
   background-color: #fff;
-
-  -webkit-box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
-  -moz-box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
-  box-shadow: 0px 0px 6px 0px rgba(166, 166, 166, 1);
+  border: 0.5px solid rgba(153, 153, 153, 0.3);
 `;
 
 export const ContainTitle = styled.div`
@@ -29,25 +26,20 @@ export const ContainProduct = styled(Link)`
   margin: 5px;
   padding: 5px;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-bottom: 1px solid #d9d9d9;
   cursor: pointer;
   text-decoration: none;
-  color: #000;
-
-  :hover {
-    -webkit-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-    -moz-box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-    box-shadow: -2px 8px 15px -11px rgba(153, 153, 153, 1);
-
-    background-color: #eee;
-  }
+  color: #4d4d4d;
 
   :focus {
     outline: none;
   }
+
+  :hover {
+    color: #1a1a1a;
+    border-bottom: 1px solid #404040;
+    transition: 300ms;
+  }
 `;
 
-export const SectionName = styled.h3`
-  color: #737373;
-`;
+export const SectionName = styled.h3``;

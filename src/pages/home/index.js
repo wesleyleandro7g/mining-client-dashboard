@@ -28,7 +28,7 @@ function home() {
             <SmallCard
               colorCardIcon="#79d279"
               icon={MdAttachMoney}
-              titleCard="Saldo disponível"
+              titleCard="Carta de crédito"
               textCard="R$ 54000,00"
               textFooter="SMALL CARD"
             />

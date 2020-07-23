@@ -1,6 +1,8 @@
 import manganes from "./imgProducts/Manganes1.jpeg";
 import manganes2 from "./imgProducts/Manganes2.jpeg";
 import hematita from "./imgProducts/Hematita.jpeg";
+import cobre from "./imgProducts/cobre.jpeg";
+import estanho from "./imgProducts/estanho.jpeg";
 
 export const products = [
   {
@@ -38,24 +40,24 @@ export const products = [
   },
   {
     id: 4,
-    name: "Nome do mineral",
-    content: 0.2,
-    operations: 5,
-    rating: 3.5,
-    value: 18000,
-    granulometry: 1,
-    region: "Região",
-    image: "",
+    name: "Minério de cobre (Cu)",
+    content: 0.3,
+    operations: 1,
+    rating: 1,
+    value: 1000,
+    granulometry: 15,
+    region: "Carajás",
+    image: cobre,
   },
   {
     id: 5,
-    name: "Abcde",
-    content: 0.2,
+    name: "Estanho (Sn)",
+    content: 0.79,
     operations: 5,
-    rating: 3.5,
-    value: 18000,
+    rating: 2,
+    value: 1100,
     granulometry: 1,
-    region: "Região",
-    image: "",
+    region: "Rondônia (norte)",
+    image: estanho,
   },
 ];

@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 import Drawer from "../../../components/drawer";
 import ProductCard from "../../../components/productCard";
@@ -28,11 +28,10 @@ function HandleProducts() {
       <Drawer select={2} title="Comprar" />
       <Content>
         <ContaintSubHeader>
-          <ArrowBackIcon
-            style={{ color: "#000", fontSize: 22, marginRight: 5 }}
-          />
           <Title to="/compras">{localStorage.getItem("section")}</Title>
-          <Title>-</Title>
+          <ArrowForwardIosIcon
+            style={{ color: "#000", fontSize: 16, marginRight: 5 }}
+          />
           <Title style={{ cursor: "auto" }}>
             {localStorage.getItem("product")}
           </Title>

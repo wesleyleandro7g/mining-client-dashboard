@@ -11,10 +11,17 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  margin-top: 5%;
+
   margin-left: 1%;
   margin-right: 1%;
   background-color: ${(props) => Colors.background};
+`;
+
+export const ContainHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5%;
 `;
 
 export const ContainCards = styled(Content)`
