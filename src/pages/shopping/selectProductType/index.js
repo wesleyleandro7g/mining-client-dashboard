@@ -1,7 +1,7 @@
 import React from "react";
 
 import PersistentDrawerLeft from "../../../components/drawer";
-import OreTypeCard from "../../../components/oreTypeCard";
+import OreTypeCard from "../../../components/cards/oreTypeCard";
 import Filter from "../../../components/filter";
 
 import { products1, products2, products3 } from "../../../Temp/TypeProduct";

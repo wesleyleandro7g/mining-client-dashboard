@@ -1,5 +1,5 @@
 import React from "react";
-import MaterialTable from "../table";
+import MaterialTable from "../../table";
 
 import { Container, ContainIconCard, ContainItemsCard, Text } from "./styles";
 

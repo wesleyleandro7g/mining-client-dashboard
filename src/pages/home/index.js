@@ -3,9 +3,9 @@ import { MdReportProblem, MdAttachMoney, MdTrendingUp } from "react-icons/md";
 import Table from "../../components/table";
 
 import PersistentDrawerLeft from "../../components/drawer";
-import SmallCard from "../../components/smallCard";
-import MediumCard from "../../components/mediumCard";
-import LargeCard from "../../components/largeCard";
+import SmallCard from "../../components/cards/smallCard";
+import MediumCard from "../../components/cards/mediumCard";
+import LargeCard from "../../components/cards/largeCard";
 
 import {
   Container,

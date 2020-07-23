@@ -1,7 +1,7 @@
 import React from "react";
 import PanoramaIcon from "@material-ui/icons/Panorama";
 
-import Rating from "../rating";
+import Rating from "../../rating";
 
 import {
   Container,

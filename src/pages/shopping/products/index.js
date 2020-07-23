@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 import Drawer from "../../../components/drawer";
-import ProductCard from "../../../components/productCard";
+import ProductCard from "../../../components/cards/productCard";
 
 import {
   Container,
