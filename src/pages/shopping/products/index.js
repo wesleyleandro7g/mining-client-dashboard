@@ -30,7 +30,8 @@ function HandleProducts() {
   const history = useHistory();
   const [filterState, setFilterState] = useState(false);
 
-  const handleProductDatails = () => {
+  const handleProductDatails = (product) => {
+    localStorage.setItem("productId", product.id);
     history.push("/compras/produtos/datalhes");
   };
 
@@ -54,7 +55,7 @@ function HandleProducts() {
             <ArrowForwardIosIcon
               style={{ color: "#000", fontSize: 16, marginRight: 5 }}
             />
-            <Title style={{ cursor: "auto", textDecoration: "none" }}>
+            <Title style={{ cursor: "auto" }}>
               {localStorage.getItem("product")}
             </Title>
           </ContainLeftOptions>
@@ -70,7 +71,12 @@ function HandleProducts() {
           </ContainRigthOptions>
         </ContaintSubHeader>
         <ContainMenu>
-          <Scroll speed={2} style={{ width: filterState ? "80%" : "100%" }}>
+          <Scroll
+            speed={2}
+            style={{ width: filterState ? "80%" : "100%" }}
+            verticalScrollbarStyle={{ display: "none" }}
+            verticalContainerStyle={{ display: "none" }}
+          >
             <ContainProductsList>
               {products.map((product) => (
                 <ProductCard

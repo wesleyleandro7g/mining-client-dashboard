@@ -30,79 +30,84 @@ export const ContainLeftOptions = styled.div`
   align-items: center;
 `;
 
-export const ContainRigthOptions = styled.div``;
-
-export const ContainMenu = styled.div`
+export const ContainRigthOptions = styled.div`
   display: flex;
-`;
-
-export const ContainProductsList = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
-  width: 100%;
-
-  @media (max-width: 2050px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 1750px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (max-width: 1150px) {
-    grid-template-columns: 1fr 1fr;
-  }
-`;
-
-export const ContainFilter = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  transition: 300ms;
-`;
-
-export const Title = styled(Link)`
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
-  margin-right: 5px;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: underline;
-
-  :focus {
-    outline: none;
-  }
 `;
 
 export const Scroll = styled(Scrolle)`
-  height: 80vh;
-  padding-top: 15px;
-  transition: 300ms;
+  width: 90%;
+  height: 85vh;
+  align-self: center;
+  background-color: #fff;
 
   -webkit-scrollbar {
     display: none;
   }
 `;
 
-export const ButtonFilter = styled.button`
+export const ContainDatails = styled.div`
   display: flex;
-  width: 100px;
-  height: 35px;
+  flex-direction: column;
+  height: auto;
+  margin: 1%;
+  border-bottom: 0.5px solid #ccc;
+`;
+
+export const ContainImage = styled.div`
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  background-color: #d9d9d9;
+  width: 25%;
+  padding: 5px;
+`;
+
+export const ContainInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin-left: 15px;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+export const Title = styled(Link)`
+  cursor: pointer;
+  color: #000;
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+
+  :focus {
+    outline: none;
+  }
+`;
+
+export const Button = styled.button`
+  width: 150px;
+  height: 40px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 2px;
+  margin-bottom: 5px;
   cursor: pointer;
 
+  background-color: #ddd;
+  color: #333;
   :focus {
     outline: 0;
   }
 
   :hover {
+    transition: 300ms;
     background-color: #ccc;
   }
+`;
+
+export const Text = styled.h1`
+  margin: 0;
+  font-weight: 400;
 `;
