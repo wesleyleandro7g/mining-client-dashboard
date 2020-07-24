@@ -11,6 +11,11 @@ export const Container = styled.div`
   border-radius: 5px;
   background-color: ${(props) => Colors.tertiary};
   border: 0.5px solid rgba(153, 153, 153, 0.2);
+  cursor: pointer;
+
+  :focus {
+    outline: 0;
+  }
 
   @media (max-width: 1250px) {
     width: 400px;

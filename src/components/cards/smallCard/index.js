@@ -15,11 +15,12 @@ const SmallCard = ({
   titleCard,
   textCard,
   textFooter,
+  onClick,
 }) => {
   const IconName = icon;
 
   return (
-    <Container>
+    <Container onClick={onClick}>
       <CardHeader>
         <ContainIconCard colorCardIcon={colorCardIcon}>
           <IconName size="32" color="white" />

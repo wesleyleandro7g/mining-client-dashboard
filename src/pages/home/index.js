@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdReportProblem, MdAttachMoney, MdTrendingUp } from "react-icons/md";
-import Table from "../../components/table";
 
 import PersistentDrawerLeft from "../../components/drawer";
 import SmallCard from "../../components/cards/smallCard";
 import MediumCard from "../../components/cards/mediumCard";
 import LargeCard from "../../components/cards/largeCard";
+import Modal from "../../components/modal";
 
 import {
   Container,
@@ -15,7 +15,13 @@ import {
   Scroll,
 } from "./styles";
 
-function home() {
+const Home = () => {
+  const [isModal, setIsModal] = useState(false);
+
+  function handleModal() {
+    setIsModal(!isModal);
+  }
+
   return (
     <Container>
       <PersistentDrawerLeft
@@ -31,6 +37,7 @@ function home() {
               titleCard="Carta de crédito"
               textCard="R$ 54000,00"
               textFooter="SMALL CARD"
+              onClick={() => handleModal()}
             />
             <SmallCard
               colorCardIcon="#ffb84d"
@@ -38,6 +45,7 @@ function home() {
               titleCard="Small card"
               textCard="Small Card"
               textFooter="SMALL CARD"
+              onClick={() => handleModal()}
             />
             <SmallCard
               colorCardIcon="#ff6666"
@@ -45,6 +53,7 @@ function home() {
               titleCard="Small Card"
               textCard="Small Card"
               textFooter="SMALL CARD"
+              onClick={() => handleModal()}
             />
             <SmallCard
               colorCardIcon="#8cb3d9"
@@ -52,6 +61,7 @@ function home() {
               titleCard="Ultima compra"
               textCard="Nenhuma compra"
               textFooter="SMALL CARD"
+              onClick={() => handleModal()}
             />
           </ContainCards>
           <ContainCards style={{ display: "flex" }}>
@@ -75,8 +85,9 @@ function home() {
           </ContainCards>
         </Scroll>
       </Content>
+      <Modal isModal={isModal} closeModal={() => handleModal()} />
     </Container>
   );
-}
+};
 
-export default home;
+export default Home;

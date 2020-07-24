@@ -207,7 +207,7 @@ export default function MiniDrawer({ select, title }) {
                   variant="h6"
                   style={{ fontWeight: 400, fontSize: 14 }}
                 >
-                  Saldo: R$1800,00
+                  Carta de crédito: R$1800,00
                 </Typography>
                 <Typography
                   variant="h6"

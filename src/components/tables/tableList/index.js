@@ -16,7 +16,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 
-import { products } from "../../Temp/Products";
+import { products } from "../../../Temp/Products";
 
 // function createData(name, granulometry, rating, content, value) {
 //   return { name, granulometry, rating, content, value };
