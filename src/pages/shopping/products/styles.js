@@ -70,6 +70,7 @@ export const Title = styled(Link)`
   margin-right: 5px;
   font-size: 18px;
   font-weight: 500;
+  text-decoration: underline;
 
   :focus {
     outline: none;

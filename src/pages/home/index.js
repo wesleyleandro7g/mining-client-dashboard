@@ -55,7 +55,7 @@ function home() {
             />
           </ContainCards>
           <ContainCards style={{ display: "flex" }}>
-            <Table />
+            <LargeCard />
           </ContainCards>
           <ContainMediumCards>
             <MediumCard color="#8cb3d9" />

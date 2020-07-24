@@ -54,7 +54,7 @@ function HandleProducts() {
             <ArrowForwardIosIcon
               style={{ color: "#000", fontSize: 16, marginRight: 5 }}
             />
-            <Title style={{ cursor: "auto" }}>
+            <Title style={{ cursor: "auto", textDecoration: "none" }}>
               {localStorage.getItem("product")}
             </Title>
           </ContainLeftOptions>
@@ -80,6 +80,7 @@ function HandleProducts() {
               ))}
             </ContainProductsList>
           </Scroll>
+
           <ContainFilter
             style={{
               width: filterState ? "20%" : "0",

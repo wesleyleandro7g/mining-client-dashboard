@@ -1,20 +1,18 @@
 import React from "react";
-import MaterialTable from "../../table";
 
-import { Container, ContainIconCard, ContainItemsCard, Text } from "./styles";
+import Map from "../../map";
 
-const largeCard = ({
-  colorCardIcon,
-  icon,
-  titleCard,
-  textCard,
-  textFooter,
-}) => {
-  const IconName = icon;
+import { Container, Content, Text } from "./styles";
 
+const largeCard = () => {
   return (
     <Container>
-      <MaterialTable></MaterialTable>
+      <Content>
+        <Text>TABLE</Text>
+      </Content>
+      <Content>
+        <Map />
+      </Content>
     </Container>
   );
 };

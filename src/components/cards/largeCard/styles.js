@@ -3,9 +3,8 @@ import { Colors } from "../../../styles/CommonStyles";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 550px;
   border-radius: 5px;
@@ -15,27 +14,13 @@ export const Container = styled.div`
   border: 0.5px solid rgba(153, 153, 153, 0.2);
 `;
 
-export const ContainIconCard = styled.div`
+export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 90px;
-  margin-top: -30px;
+  width: 50%;
+  height: 90%;
   background-color: ${(props) => props.colorCardIcon};
-  border-radius: 3px;
-
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
-  box-shadow: 0px 5px 10px 0px rgba(204, 204, 204, 1);
-`;
-
-export const ContainItemsCard = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 `;
 
 export const Text = styled.h4`
