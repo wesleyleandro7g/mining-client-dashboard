@@ -6,25 +6,18 @@ export default function TablePreferences() {
     columns: [
       { title: "Pais", field: "pais" },
       { title: "Região", field: "region" },
-      { title: "Birth Year", field: "birthYear", type: "numeric" },
-      {
-        title: "Birth Place",
-        field: "birthCity",
-        lookup: { 34: "İstanbul", 63: "Şanlıurfa" },
-      },
+      { title: "Mineradoras Ativas", field: "Mineradoras", type: "numeric" },
     ],
     data: [
       {
         pais: "Brasil",
         region: "Centro Oeste",
-        birthYear: 1987,
-        birthCity: 63,
+        Mineradoras: 72,
       },
       {
         pais: "Brasil",
         region: "Norte de Minas Gerais",
-        birthYear: 2017,
-        birthCity: 34,
+        Mineradoras: 104,
       },
     ],
   });
